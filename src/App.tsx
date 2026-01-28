@@ -286,7 +286,7 @@ const PhilosophySection: React.FC = () => {
           </div>
           <div className="lg:w-1/2">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-navy mb-4 sm:mb-6">Our Holistic & Friendly Approach</h2>
-            <p className="text-sm sm:text-base md:text-lg text-stone-700 mb-4 sm:mb-6 leading-relaxed">
+            <p className="text-sm sm:text-base md:text-lg text-stone-900 mb-4 sm:mb-6 leading-relaxed">
               Bharatanatyam is an art of expressions and postures. Just like Bharatanatyam being unique from other dance forms, everyone is unique in their talents too. Many lack the courage to showcase their potential.
             </p>
             <div className="space-y-6">
@@ -294,21 +294,21 @@ const PhilosophySection: React.FC = () => {
                 <div className="flex-shrink-0 w-10 h-10 bg-amber-100 text-amber-600 rounded-lg flex items-center justify-center font-bold">1</div>
                 <div>
                   <h4 className="font-bold text-stone-900 mb-1">Everyone is Equal</h4>
-                  <p className="text-stone-600">In our shaale, no one is superior to the other. We ensure that despite age, every student is taught with equal dedication.</p>
+                  <p className="text-stone-800">In our shaale, no one is superior to the other. We ensure that despite age, every student is taught with equal dedication.</p>
                 </div>
               </div>
               <div className="flex gap-4">
                 <div className="flex-shrink-0 w-10 h-10 bg-amber-100 text-amber-600 rounded-lg flex items-center justify-center font-bold">2</div>
                 <div>
                   <h4 className="font-bold text-stone-900 mb-1">Building Confidence</h4>
-                  <p className="text-stone-600">We nurture self-belief in our students, encouraging them to showcase their skills in our grand Bharatanatyam shows.</p>
+                  <p className="text-stone-800">We nurture self-belief in our students, encouraging them to showcase their skills in our grand Bharatanatyam shows.</p>
                 </div>
               </div>
               <div className="flex gap-4">
                 <div className="flex-shrink-0 w-10 h-10 bg-amber-100 text-amber-600 rounded-lg flex items-center justify-center font-bold">3</div>
                 <div>
                   <h4 className="font-bold text-stone-900 mb-1">Holistic Learning</h4>
-                  <p className="text-stone-600">Our teaching isn't just about steps; it's about the emotional, physical, and spiritual growth of the dancer.</p>
+                  <p className="text-stone-800">Our teaching isn't just about steps; it's about the emotional, physical, and spiritual growth of the dancer.</p>
                 </div>
               </div>
             </div>
