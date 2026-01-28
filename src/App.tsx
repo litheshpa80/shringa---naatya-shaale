@@ -74,7 +74,7 @@ const Navbar: React.FC = () => {
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
             <img 
-              src="/images/logo.png" 
+              src="./images/logo.png" 
               alt="Shringa Logo" 
               className="w-12 h-12 md:w-14 md:h-14 object-contain"
             />
@@ -147,7 +147,7 @@ const Hero: React.FC = () => {
     <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
         <img 
-          src="/images/img.jpg" 
+          src="./images/img.jpg" 
           alt="Bharatanatyam Dancer" 
           className="w-full h-full object-cover"
         />
@@ -277,7 +277,7 @@ const PhilosophySection: React.FC = () => {
           <div className="lg:w-1/2">
             <div className="relative">
               <img 
-                src="/images/Screenshot 2026-01-22 152331.png" 
+                src="./images/Screenshot 2026-01-22 152331.png" 
                 alt="Dance Practice" 
                 className="rounded-2xl shadow-2xl relative z-10"
               />
@@ -347,7 +347,7 @@ const AboutVidushi: React.FC = () => {
           <div className="md:w-1/2 order-1 md:order-2 flex justify-center">
             <div className="relative w-64 h-64 md:w-96 md:h-96">
               <img 
-                src="/images/MyImg.png" 
+                src="./images/MyImg.png" 
                 alt="Vibhashree" 
                 className="w-full h-full object-cover rounded-full border-8 border-white/10 shadow-2xl"
               />
@@ -498,7 +498,7 @@ const Footer: React.FC = () => {
           <div className="flex flex-col items-center md:items-start">
             <div className="mb-6 flex items-center gap-3">
               <img 
-                src="/images/logo.png" 
+                src="./images/logo.png" 
                 alt="Shringa Logo" 
                 className="w-12 h-12 object-contain"
               />
@@ -584,10 +584,10 @@ const Footer: React.FC = () => {
 
 const Gallery: React.FC = () => {
   const screenshots = [
-    { src: '/images/Screenshot 2026-01-22 152251.png', alt: 'Bharatanatyam Performance - Classical Dance Form' },
-    { src: '/images/Screenshot 2026-01-22 152314.png', alt: 'Dance Posture & Movement Study' },
-    { src: '/images/Screenshot 2026-01-22 152357.png', alt: 'Traditional Dance Formation' },
-    { src: '/images/Screenshot 2026-01-22 152406.png', alt: 'Expressive Dance Sequence' },
+    { src: './images/Screenshot 2026-01-22 152251.png', alt: 'Bharatanatyam Performance - Classical Dance Form' },
+    { src: './images/Screenshot 2026-01-22 152314.png', alt: 'Dance Posture & Movement Study' },
+    { src: './images/Screenshot 2026-01-22 152357.png', alt: 'Traditional Dance Formation' },
+    { src: './images/Screenshot 2026-01-22 152406.png', alt: 'Expressive Dance Sequence' },
   ];
 
   return (
