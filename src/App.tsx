@@ -426,8 +426,8 @@ const Contact: React.FC = () => {
 
             <div className="mt-12 p-8 bg-temple border border-stone-200 rounded-2xl">
               <h4 className="font-bold mb-4 flex items-center gap-2"><Sparkles className="text-amber-500" /> Class Timings</h4>
-              <p className="text-stone-600 mb-2">We offer flexible batches for children and adults.</p>
-              <div className="space-y-2 text-sm text-stone-500">
+              <p className="text-stone-800 mb-2">We offer flexible batches for children and adults.</p>
+              <div className="space-y-2 text-sm text-stone-800">
                 <div className="flex justify-between border-b border-stone-100 py-1"><span>Weekday Batches</span> <span>4:00 PM - 7:00 PM</span></div>
                 <div className="flex justify-between py-1"><span>Weekend Batches</span> <span>9:00 AM - 12:00 PM</span></div>
               </div>
