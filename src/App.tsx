@@ -239,8 +239,8 @@ const WhyBharatanatyam: React.FC = () => {
 
           {/* Spiritual */}
           <div className="bg-stone-50 p-8 rounded-2xl border-b-4 border-navy hover:-translate-y-2 transition-transform shadow-sm">
-            <div className="w-16 h-16 bg-navy rounded-full flex items-center justify-center text-amber-500 mb-6 shadow-lg">
-              <Music size={32} />
+            <div className="w-16 h-16 bg-navy rounded-full flex items-center justify-center text-amber-500 mb-6 shadow-lg text-3xl font-bold">
+              ॐ
             </div>
             <h3 className="text-2xl font-bold text-stone-900 mb-4">Spiritual Connection</h3>
             <p className="text-stone-600 leading-relaxed">
