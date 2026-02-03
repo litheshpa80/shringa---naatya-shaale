@@ -228,8 +228,8 @@ const WhyBharatanatyam: React.FC = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 md:gap-12">
           {/* Cultural */}
           <div className="bg-stone-50 p-6 sm:p-8 rounded-2xl border-b-4 border-navy hover:-translate-y-2 transition-transform shadow-sm">
-            <div className="w-14 sm:w-16 h-14 sm:h-16 bg-navy rounded-full flex items-center justify-center text-amber-500 mb-4 sm:mb-6 shadow-lg flex-shrink-0">
-              <Sparkles size={28} />
+            <div className="w-14 sm:w-16 h-14 sm:h-16 bg-navy rounded-full flex items-center justify-center text-amber-500 mb-4 sm:mb-6 shadow-lg flex-shrink-0 overflow-hidden">
+              <img src="./images/Cultural Significance.png" alt="Cultural Significance" className="w-full h-full object-cover" />
             </div>
             <h3 className="text-lg sm:text-2xl font-bold text-stone-900 mb-3 sm:mb-4">Cultural Significance</h3>
             <p className="text-stone-600 leading-relaxed">
