@@ -277,7 +277,7 @@ const PhilosophySection: React.FC = () => {
           <div className="lg:w-1/2">
             <div className="relative">
               <img 
-                src="./images/Screenshot 2026-01-22 152331.png" 
+                src="./images/Holistic Approach Background image.png" 
                 alt="Dance Practice" 
                 className="rounded-2xl shadow-2xl relative z-10"
               />
