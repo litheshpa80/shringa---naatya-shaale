@@ -361,15 +361,54 @@ const AboutVidushi: React.FC = () => {
 };
 
 const Contact: React.FC = () => {
-  const [formState, setFormState] = useState<'idle' | 'submitting' | 'success'>('idle');
-  
-  const handleSubmit = (e: React.FormEvent) => {
+  const [formState, setFormState] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+  const [formData, setFormData] = useState({
+    name: '',
+    age: '',
+    phone: '',
+    message: '',
+  });
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setFormState('submitting');
-    setTimeout(() => {
-      setFormState('success');
+    setErrorMessage('');
+
+    try {
+      const response = await fetch('/api/inquiry', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        setFormState('success');
+        setFormData({ name: '', age: '', phone: '', message: '' });
+        setTimeout(() => setFormState('idle'), 5000);
+      } else {
+        setFormState('error');
+        setErrorMessage(data.message || 'Failed to send inquiry. Please try again.');
+        setTimeout(() => setFormState('idle'), 5000);
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setFormState('error');
+      setErrorMessage('An error occurred. Please try again.');
       setTimeout(() => setFormState('idle'), 5000);
-    }, 1500);
+    }
   };
 
   return (
@@ -440,25 +479,74 @@ const Contact: React.FC = () => {
                   Send another inquiry
                 </button>
               </div>
+            ) : formState === 'error' ? (
+              <div className="flex flex-col items-center justify-center h-full py-20 text-center animate-fadeIn">
+                <div className="w-20 h-20 bg-red-100 text-red-600 rounded-full flex items-center justify-center mb-6">
+                  <X size={48} />
+                </div>
+                <h3 className="text-2xl font-bold text-stone-900 mb-2">Oops!</h3>
+                <p className="text-stone-600 mb-6">{errorMessage}</p>
+                <button 
+                  onClick={() => setFormState('idle')}
+                  className="mt-4 px-6 py-2 bg-navy text-white font-bold rounded-lg hover:bg-black transition-all"
+                >
+                  Try Again
+                </button>
+              </div>
             ) : (
               <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-bold text-stone-700 mb-2">Student Name</label>
-                    <input required type="text" className="w-full px-4 py-3 bg-stone-50 border border-stone-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy transition-all" placeholder="Full Name" />
+                    <input 
+                      required 
+                      type="text" 
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      disabled={formState === 'submitting'}
+                      className="w-full px-4 py-3 bg-stone-50 border border-stone-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy transition-all disabled:opacity-50 disabled:cursor-not-allowed" 
+                      placeholder="Full Name" 
+                    />
                   </div>
                   <div>
                     <label className="block text-sm font-bold text-stone-700 mb-2">Age</label>
-                    <input required type="number" className="w-full px-4 py-3 bg-stone-50 border border-stone-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy transition-all" placeholder="Years" />
+                    <input 
+                      required 
+                      type="number" 
+                      name="age"
+                      value={formData.age}
+                      onChange={handleInputChange}
+                      disabled={formState === 'submitting'}
+                      className="w-full px-4 py-3 bg-stone-50 border border-stone-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy transition-all disabled:opacity-50 disabled:cursor-not-allowed" 
+                      placeholder="Years" 
+                    />
                   </div>
                 </div>
                 <div>
                   <label className="block text-sm font-bold text-stone-700 mb-2">Contact Number</label>
-                  <input required type="tel" className="w-full px-4 py-3 bg-stone-50 border border-stone-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy transition-all" placeholder="+91 00000 00000" />
+                  <input 
+                    required 
+                    type="tel" 
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    disabled={formState === 'submitting'}
+                    className="w-full px-4 py-3 bg-stone-50 border border-stone-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy transition-all disabled:opacity-50 disabled:cursor-not-allowed" 
+                    placeholder="+91 00000 00000" 
+                  />
                 </div>
                 <div>
                   <label className="block text-sm font-bold text-stone-700 mb-2">Message (Optional)</label>
-                  <textarea rows={4} className="w-full px-4 py-3 bg-stone-50 border border-stone-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy transition-all" placeholder="Tell us about any previous dance experience..."></textarea>
+                  <textarea 
+                    rows={4} 
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    disabled={formState === 'submitting'}
+                    className="w-full px-4 py-3 bg-stone-50 border border-stone-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-navy transition-all disabled:opacity-50 disabled:cursor-not-allowed" 
+                    placeholder="Tell us about any previous dance experience..."
+                  ></textarea>
                 </div>
                 <button 
                   type="submit" 
