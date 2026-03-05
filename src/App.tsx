@@ -663,10 +663,10 @@ const Footer: React.FC = () => {
 
 const Gallery: React.FC = () => {
   const screenshots = [
-    { src: './images/Screenshot 2026-01-22 152251.png', alt: 'Bharatanatyam Performance - Classical Dance Form' },
-    { src: './images/Screenshot 2026-01-22 152314.png', alt: 'Dance Posture & Movement Study' },
-    { src: './images/Image Gallery 1.png', alt: 'Gallery Image 1' },
-    { src: './images/Image Gallery 2.png', alt: 'Gallery Image 2' },
+    { src: './images/img_1.jpeg', alt: 'Bharatanatyam Performance - Classical Dance Form' },
+    { src: './images/img_2.jpg', alt: 'Dance Posture & Movement Study' },
+    { src: './images/img_3.jpg', alt: 'Traditional Dance Formation' },
+    { src: './images/img_4.jpg', alt: 'Expressive Dance Sequence' },
   ];
 
   return (

@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { 
   Menu, 
@@ -584,10 +583,10 @@ const Footer: React.FC = () => {
 
 const Gallery: React.FC = () => {
   const screenshots = [
-    { src: '/images/Screenshot 2026-01-22 152251.png', alt: 'Bharatanatyam Performance - Classical Dance Form' },
-    { src: '/images/Screenshot 2026-01-22 152314.png', alt: 'Dance Posture & Movement Study' },
-    { src: '/images/Screenshot 2026-01-22 152357.png', alt: 'Traditional Dance Formation' },
-    { src: '/images/Screenshot 2026-01-22 152406.png', alt: 'Expressive Dance Sequence' },
+    { src: '/images/img_1.png', alt: 'Bharatanatyam Performance - Classical Dance Form' },
+    { src: '/images/img_2.png', alt: 'Dance Posture & Movement Study' },
+    { src: '/images/img_3.png', alt: 'Traditional Dance Formation' },
+    { src: '/images/img_4.png', alt: 'Expressive Dance Sequence' },
   ];
 
   return (
