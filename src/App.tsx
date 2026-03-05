@@ -573,7 +573,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-stone-900 text-white py-16">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="grid md:grid-cols-3 gap-12 mb-12">
+        <div className="grid md:grid-cols-2 gap-12 mb-12">
           <div className="flex flex-col items-center md:items-start">
             <div className="mb-6 flex items-center gap-3">
               <img 
@@ -636,21 +636,6 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          <div>
-            <h4 className="text-lg font-bold mb-6 text-amber-500">Locate Us</h4>
-            <a 
-              href="https://www.google.com/maps/search/?api=1&query=%2311+Gubbalala+main+road+Bengaluru+560061" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="block aspect-video w-full bg-stone-800 rounded-lg overflow-hidden grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all cursor-pointer border border-white/5 group"
-            >
-              <div className="w-full h-full flex flex-col items-center justify-center p-4 text-center text-xs group-hover:bg-stone-700/50 transition-colors">
-                <MapPin className="text-amber-500 mb-2 group-hover:scale-125 transition-transform" size={32} />
-                <span className="font-bold text-stone-300">Gubbalala Main Road, Bengaluru</span>
-                <span className="text-stone-500 mt-1">Click to open Google Maps</span>
-              </div>
-            </a>
-          </div>
         </div>
         
         <div className="border-t border-white/10 pt-8 text-center text-stone-500 text-sm">
@@ -663,10 +648,12 @@ const Footer: React.FC = () => {
 
 const Gallery: React.FC = () => {
   const screenshots = [
-    { src: './images/img_1.jpeg', alt: 'Bharatanatyam Performance - Classical Dance Form' },
-    { src: './images/img_2.jpg', alt: 'Dance Posture & Movement Study' },
-    { src: './images/img_3.jpg', alt: 'Traditional Dance Formation' },
-    { src: './images/img_4.jpg', alt: 'Expressive Dance Sequence' },
+    { src: './images/Screenshot 2026-01-22 152251.png', alt: 'Bharatanatyam Performance - Classical Dance Form', positionClass: 'object-[center_20%]' },
+    { src: './images/Screenshot 2026-01-22 152314.png', alt: 'Dance Posture & Movement Study', positionClass: 'object-[center_20%]' },
+    { src: './images/img_1.jpeg', alt: 'Bharatanatyam Performance - Classical Dance Form', positionClass: 'object-[center_78%]' },
+    { src: './images/img_2.jpg', alt: 'Dance Posture & Movement Study', positionClass: 'object-[center_20%]' },
+    { src: './images/img_3.jpg', alt: 'Traditional Dance Formation', positionClass: 'object-[center_20%]' },
+    { src: './images/img_4.jpg', alt: 'Expressive Dance Sequence', positionClass: 'object-[center_20%]' },
   ];
 
   return (
@@ -687,12 +674,8 @@ const Gallery: React.FC = () => {
               <img 
                 src={image.src} 
                 alt={image.alt} 
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                style={index > 0 ? { objectPosition: 'center 20%' } : undefined}
+                className={`w-full h-full object-cover ${image.positionClass} group-hover:scale-110 transition-transform duration-500`}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 sm:p-6">
-                <p className="text-white font-semibold text-sm sm:text-lg">{image.alt}</p>
-              </div>
             </div>
           ))}
         </div>
