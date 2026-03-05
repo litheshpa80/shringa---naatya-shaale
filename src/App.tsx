@@ -74,7 +74,7 @@ const Navbar: React.FC = () => {
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
             <img 
-              src="./images/logo.png" 
+              src="/images/logo.png" 
               alt="Shringa Logo" 
               className="w-12 h-12 md:w-14 md:h-14 object-contain"
             />
@@ -147,7 +147,7 @@ const Hero: React.FC = () => {
     <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
         <img 
-          src="./images/img.jpg" 
+          src="/images/img.jpg" 
           alt="Bharatanatyam Dancer" 
           className="w-full h-full object-cover"
         />
@@ -229,7 +229,7 @@ const WhyBharatanatyam: React.FC = () => {
           {/* Cultural */}
           <div className="bg-stone-50 p-6 sm:p-8 rounded-2xl border-b-4 border-navy hover:-translate-y-2 transition-transform shadow-sm">
             <div className="w-14 sm:w-16 h-14 sm:h-16 bg-navy rounded-full flex items-center justify-center text-amber-500 mb-4 sm:mb-6 shadow-lg flex-shrink-0 overflow-hidden">
-              <img src="./images/Cultural Significance.png" alt="Cultural Significance" className="w-full h-full object-cover" />
+              <img src="/images/Cultural Significance.png" alt="Cultural Significance" className="w-full h-full object-cover" />
             </div>
             <h3 className="text-lg sm:text-2xl font-bold text-stone-900 mb-3 sm:mb-4">Cultural Significance</h3>
             <p className="text-stone-600 leading-relaxed">
@@ -277,7 +277,7 @@ const PhilosophySection: React.FC = () => {
           <div className="lg:w-1/2">
             <div className="relative">
               <img 
-                src="./images/Holistic Approach Background image.png" 
+                src="/images/Holistic Approach Background image.png" 
                 alt="Dance Practice" 
                 className="rounded-2xl shadow-2xl relative z-10"
               />
@@ -347,7 +347,7 @@ const AboutVidushi: React.FC = () => {
           <div className="md:w-1/2 order-1 md:order-2 flex justify-center">
             <div className="relative w-64 h-64 md:w-96 md:h-96">
               <img 
-                src="./images/MyImg.png" 
+                src="/images/MyImg.png" 
                 alt="Vibhashree" 
                 className="w-full h-full object-cover rounded-full border-8 border-white/10 shadow-2xl"
               />
@@ -577,7 +577,7 @@ const Footer: React.FC = () => {
           <div className="flex flex-col items-center md:items-start">
             <div className="mb-6 flex items-center gap-3">
               <img 
-                src="./images/logo.png" 
+                src="/images/logo.png" 
                 alt="Shringa Logo" 
                 className="w-12 h-12 object-contain"
               />
@@ -648,12 +648,12 @@ const Footer: React.FC = () => {
 
 const Gallery: React.FC = () => {
   const screenshots = [
-    { src: './images/Screenshot 2026-01-22 152251.png', alt: 'Bharatanatyam Performance - Classical Dance Form', positionClass: 'object-[center_20%]' },
-    { src: './images/Screenshot 2026-01-22 152314.png', alt: 'Dance Posture & Movement Study', positionClass: 'object-[center_20%]' },
-    { src: './images/img_1.jpeg', alt: 'Bharatanatyam Performance - Classical Dance Form', positionClass: 'object-[center_78%]' },
-    { src: './images/img_2.jpg', alt: 'Dance Posture & Movement Study', positionClass: 'object-[center_20%]' },
-    { src: './images/img_3.jpg', alt: 'Traditional Dance Formation', positionClass: 'object-[center_20%]' },
-    { src: './images/img_4.jpg', alt: 'Expressive Dance Sequence', positionClass: 'object-[center_20%]' },
+    { src: '/images/Screenshot 2026-01-22 152251.png', alt: 'Bharatanatyam Performance - Classical Dance Form', positionClass: 'object-[center_20%]' },
+    { src: '/images/Screenshot 2026-01-22 152314.png', alt: 'Dance Posture & Movement Study', positionClass: 'object-[center_20%]' },
+    { src: '/images/img_1.jpeg', alt: 'Bharatanatyam Performance - Classical Dance Form', positionClass: 'object-[center_78%]' },
+    { src: '/images/img_2.jpg', alt: 'Dance Posture & Movement Study', positionClass: 'object-[center_20%]' },
+    { src: '/images/img_3.jpg', alt: 'Traditional Dance Formation', positionClass: 'object-[center_20%]' },
+    { src: '/images/img_4.jpg', alt: 'Expressive Dance Sequence', positionClass: 'object-[center_20%]' },
   ];
 
   return (
