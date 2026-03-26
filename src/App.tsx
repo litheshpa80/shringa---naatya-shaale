@@ -654,7 +654,6 @@ const Gallery: React.FC = () => {
     { src: '/images/img_2.jpg', alt: 'Dance Posture & Movement Study', positionClass: 'object-[center_20%]' },
     { src: '/images/img_3.jpg', alt: 'Traditional Dance Formation', positionClass: 'object-[center_20%]' },
     { src: '/images/img_4.jpg', alt: 'Expressive Dance Sequence', positionClass: 'object-[center_20%]' },
-<<<<<<< HEAD
     { src: '/images/img_5.jpeg', alt: 'Performance Highlight', positionClass: 'object-[center_20%]' },
   ];
 
@@ -670,10 +669,6 @@ const Gallery: React.FC = () => {
     setModalImg(null);
   };
 
-=======
-  ];
-
->>>>>>> 097b53dadc6c9a9369e43199d83b03ed65b6f924
   return (
     <section id="gallery" className="py-24 bg-stone-50">
       <div className="max-w-7xl mx-auto px-4">
@@ -687,12 +682,8 @@ const Gallery: React.FC = () => {
           {screenshots.map((image, index) => (
             <div 
               key={index} 
-<<<<<<< HEAD
               className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 aspect-video cursor-pointer"
               onClick={() => openModal({src: image.src, alt: image.alt})}
-=======
-              className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 aspect-video"
->>>>>>> 097b53dadc6c9a9369e43199d83b03ed65b6f924
             >
               <img 
                 src={image.src} 
@@ -703,7 +694,6 @@ const Gallery: React.FC = () => {
           ))}
         </div>
       </div>
-<<<<<<< HEAD
 
       {modalOpen && modalImg && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80" onClick={closeModal}>
@@ -713,8 +703,6 @@ const Gallery: React.FC = () => {
           </div>
         </div>
       )}
-=======
->>>>>>> 097b53dadc6c9a9369e43199d83b03ed65b6f924
     </section>
   );
 };
