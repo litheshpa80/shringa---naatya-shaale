@@ -654,7 +654,6 @@ const Gallery: React.FC = () => {
     { src: '/images/img_2.jpg', alt: 'Dance Posture & Movement Study', positionClass: 'object-[center_20%]' },
     { src: '/images/img_3.jpg', alt: 'Traditional Dance Formation', positionClass: 'object-[center_20%]' },
     { src: '/images/img_4.jpg', alt: 'Expressive Dance Sequence', positionClass: 'object-[center_20%]' },
-    { src: '/images/img_5.jpeg', alt: 'Performance Highlight', positionClass: 'object-[center_20%]' },
   ];
 
   const [modalOpen, setModalOpen] = useState(false);
